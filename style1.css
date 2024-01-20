@@ -69,10 +69,10 @@
     border-radius: 20px;
     border: 0;
     cursor: pointer;
-    transition: background 1s;
+    transition: background 2s;
 }
 .button-field button.disable{
     background: gray;
-    color: #555;
+    color: #545;
     
 }
