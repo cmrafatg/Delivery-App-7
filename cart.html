@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="mainbar">
+    <ion-icon name="earth-outline" class ="logo"></ion-icon> 
+    <h1 class="icon">David's Food</h1> 
+    <div class="menus">
+        <a href="#"><ion-icon name="home-outline"></ion-icon>Home</a>
+        <a href="#"><ion-icon name="cart-outline"></ion-icon>Supermarkets</a>
+        <a href="#"><ion-icon name="fast-food-outline"></ion-icon>Restaurants</a>
+        <a href="#"><ion-icon name="log-in-outline"></ion-icon>Log in</a>
+        <a href="#"><ion-icon name="lock-closed-outline"></ion-icon>Sign Up</a>
+        <a href="#"><ion-icon name="information-outline"></ion-icon>Help</a>
+    </div>
+</div>
+<div class="container">
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+</div>
+<br><br><br><br><br><br>
+<div class ="smallcontainer"> 
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>
+            <div class="cartinfo">
+                <img class="basket-pic" src="Pictures/burger.png">
+                <div class="basket-details">
+                    <p>Burger</p>
+                    <small>Price:£12.00</small>
+                    <br>
+                    <a class="basket-d" href="">Remove</a>
+                </div>
+            </div></td>
+            <td>
+                <input type="number" value="1">
+            </td>
+            <td>£12.00</td>
+        </tr>
+        <tr>
+            <td>
+            <div class="cartinfo">
+                <img class="basket-pic" src="Pictures/cburger.png">
+                <div class="basket-details">
+                    <p>Chicken Burger</p>
+                    <small>Price:£12.00</small>
+                    <br>
+                    <a class="basket-d" href="">Remove</a>
+                </div>
+            </div></td>
+            <td>
+                <input type="number" value="1">
+            </td>
+            <td>£12.00</td>
+        </tr><tr>
+            <td>
+            <div class="cartinfo">
+                <img class="basket-pic" src="Pictures/lasagne.jpg">
+                <div class="basket-details">
+                    <p>Lasagne</p>
+                    <small>Price:£25.00</small>
+                    <br>
+                    <a class="basket-d" href="">Remove</a>
+                </div>
+            </div></td>
+            <td>
+                <input type="number" value="1">
+            </td>
+            <td>£25.00</td>
+        </tr>
+    </table> 
+    <div class="totalprice">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>£49.00</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>£5.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>£54.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

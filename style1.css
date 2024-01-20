@@ -1,0 +1,78 @@
+:root {
+    --navy: #164863;
+    --darkblue: #427D9D;
+    --lightblue: #9BBEC8;
+    --whiteColour: #ffffff;
+    --yellowColour: #efff00;
+    --babyblue:#DDF2FD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+
+.log-in{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,50,0,0.8),rgba(0,50,0,0.8),url(Pictures/Background.png));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form{
+    width: 50%;
+    max-width: 450px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:white ;
+    padding: 10px;
+    text-align: center;  
+    margin: auto;
+    border: 5px solid;
+    margin-top: 50px;
+}
+.form h1{
+    font-size: 30px;
+    margin-bottom: 60px; 
+    color: var(--navy);
+    position: relative;
+}
+.inputfield{
+    background: gray;
+    margin: 15px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+.inputfield i{
+    margin-left: 15px;
+    color: var(--darkblue);
+
+}
+.button-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.button-field button{
+    flex-basis: 50%;
+    background: var(--darkblue);
+    color: #ffffff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.button-field button.disable{
+    background: gray;
+    color: #555;
+    
+}
