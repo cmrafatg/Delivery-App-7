@@ -25,36 +25,22 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth()
-const db = firebase.database();
+const auth = firebase.auth();
 
-// Handle form submission
-document.getElementById("register-form").addEventListener("submit", function (e) {
+// Handle login form submission
+document.getElementById("login-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const email = e.target.email.value;
   const password = e.target.password.value;
-  const confirmPassword = e.target.confirmPassword.value;
 
-  if (password !== confirmPassword) {
-      document.getElementById('error-message').textContent = 'Passwords do not match.';
-      return;
-  }
-
-  auth.createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Set the user's display name
-    return userCredential.user.updateProfile({
-      displayName: e.target.name.value
-    }).then(() => userCredential); // Return userCredential for the next then block
-  })
-  .then((userCredential) => {
-    // Handle registration success
-    console.log("Registration successful with email:", userCredential.user.email);
-    window.location.href = 'index.html';
-  })
-  .catch((error) => {
-    // Handle errors
-    document.getElementById('error-message').textContent = error.message;
-  });
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      // Login successful, redirect to index.html
+      window.location.href = 'index.html';
+    })
+    .catch((error) => {
+      // Handle errors, such as incorrect email or password
+      alert(error.message); // Or display in HTML
+    });
 });

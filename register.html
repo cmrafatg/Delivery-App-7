@@ -7,8 +7,9 @@
     <title>Register</title>
     <link rel="stylesheet" href="./Style/login_register.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
   </head>
   <body>
     <div class="log-in">
@@ -23,22 +24,32 @@
           <h1>Register</h1>
           <form id="register-form">
             <div class="input-data">
-              <!-- Updated input fields with name attributes -->
               <div class="inputfield">
-                <input type="text" placeholder="Name" name="name" />
+                <input type="text" placeholder="Name" name="name" required />
               </div>
               <div class="inputfield">
-                <input type="text" placeholder="Email" name="email" />
+                <input type="email" placeholder="Email" name="email" required />
               </div>
               <div class="inputfield">
-                <input type="password" placeholder="Password" name="password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  minlength="6"
+                  required
+                />
               </div>
               <div class="inputfield">
                 <input
                   type="password"
                   placeholder="Confirm Password"
                   name="confirmPassword"
+                  required
                 />
+              </div>
+              <!-- Placeholder for error messages -->
+              <div class="inputfield">
+                <p id="error-message" style="color: red"></p>
               </div>
             </div>
             <button type="submit" class="submit-btn">Register</button>

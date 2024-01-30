@@ -37,6 +37,12 @@ body {
     color: var(--whiteColour);
     z-index: 1000;
 }
+
+.greeting {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
 .menus a{
     color:#ffffff;
     gap: 50rem;

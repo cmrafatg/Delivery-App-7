@@ -7,8 +7,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="./Style/login_register.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
   </head>
   <body>
     <div class="log-in">
@@ -24,12 +24,16 @@
           <form id="login-form">
             <div class="input-data">
               <div class="inputfield">
-                <i class="user"></i>
-                <input type="text" placeholder="Email" />
+                <input type="email" placeholder="Email" name="email" required />
               </div>
               <div class="inputfield">
-                <i class="user"></i>
-                <input type="password" placeholder="Password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  minlength="6"
+                  required
+                />
               </div>
             </div>
             <button type="submit" class="submit-btn">Login</button>
@@ -38,6 +42,6 @@
       </div>
     </div>
 
-    <script src="register.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
