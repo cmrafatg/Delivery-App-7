@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./Style/login_register.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+  </head>
+  <body>
+    <div class="log-in">
+      <div class="form">
+        <div class="tabs">
+          <span class="tab" id="login-tab">
+            <a href="login.html">Login</a>
+          </span>
+          <span class="tab" id="register-tab">Register</span>
+        </div>
+        <div class="register-form">
+          <h1>Register</h1>
+          <form id="register-form">
+            <div class="input-data">
+              <!-- Updated input fields with name attributes -->
+              <div class="inputfield">
+                <input type="text" placeholder="Name" name="name" />
+              </div>
+              <div class="inputfield">
+                <input type="text" placeholder="Email" name="email" />
+              </div>
+              <div class="inputfield">
+                <input type="password" placeholder="Password" name="password" />
+              </div>
+              <div class="inputfield">
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  name="confirmPassword"
+                />
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

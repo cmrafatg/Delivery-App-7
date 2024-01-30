@@ -35,7 +35,7 @@ body {
     position: fixed;
     background-color: var(--navy);
     color: var(--whiteColour);
-
+    z-index: 1000;
 }
 .menus a{
     color:#ffffff;

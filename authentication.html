@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content ="IE=edge">
-        <meta name="viewport"content="width=device-width, initial-scale=1.0">
-        <title>Cart</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-<body>
-    <div class = "log-in">
-        <div class ="form">
-            <h1>Sign Up</h1>
-            <form>
-                <div class="input-data">
-                    <div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Email">
-                    </div><div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Password">
-                    </div><div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Confirm Password">
-                    </div>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="style1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="log-in">
+      <div class="form">
+        <ul class="tabs">
+          <li class="tab" id="login-tab">Login</li>
+          <li class="tab" id="register-tab">Register</li>
+        </ul>
+        <div class="login-form">
+          <h1>Login</h1>
+          <form id="login-form">
+            <div class="input-data">
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+          </form>
         </div>
-        
+        <div class="register-form">
+          <h1>Register</h1>
+          <form id="register-form">
+            <div class="input-data">
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="password" placeholder="Confirm Password" />
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
     </div>
-    
-</body>
+
+    <script>
+      // JavaScript to handle tab switching
+      const loginTab = document.getElementById("login-tab");
+      const registerTab = document.getElementById("register-tab");
+      const loginForm = document.querySelector(".login-form");
+      const registerForm = document.querySelector(".register-form");
+
+      loginTab.addEventListener("click", () => {
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+        loginTab.classList.add("active");
+        registerTab.classList.remove("active");
+      });
+
+      registerTab.addEventListener("click", () => {
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+        loginTab.classList.remove("active");
+        registerTab.classList.add("active");
+      });
+    </script>
+  </body>
 </html>

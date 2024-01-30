@@ -32,3 +32,4 @@ let signupbutton=document.getElementById("signupbutton")
 let signinbutton=document.getElementById("signinbutton")
 let name=document.getElementById("name")
 let password=document.getElementById("password")
+

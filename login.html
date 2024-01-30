@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
-    <meta name="viewport"content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="style1.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class = "log-in">
-        <div class ="form">
-            <h1>Sign Up</h1>
-            <form>
-                <div class="input-data">
-                    <div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Email">
-                    </div><div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Password">
-                    </div><div class="inputfield">
-                        <i class="user"></i>
-                        <input type="text" placeholder="Confirm Password">
-                    </div>
-                    <p>Lost Password <a href="#">Click Here!</a></p>
-                </div>
-                <br>
-                <div class="button-field">
-                    <button type="button" class="disable" id="signinbutton">Sign In</button>
-                    <button type="button" id="signupbutton">Sign Up</button>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./Style/login_register.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="log-in">
+      <div class="form">
+        <div class="tabs">
+          <span class="tab" id="login-tab">Login</span>
+          <span class="tab" id="register-tab">
+            <a href="register.html">Register</a>
+          </span>
         </div>
-        
+        <div class="login-form">
+          <h1>Login</h1>
+          <form id="login-form">
+            <div class="input-data">
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="inputfield">
+                <i class="user"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">Login</button>
+          </form>
+        </div>
+      </div>
     </div>
-</body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="register.js"></script>
+  </body>
 </html>
